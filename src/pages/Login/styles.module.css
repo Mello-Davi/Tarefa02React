@@ -68,6 +68,11 @@
 .emailSenha input{
     width: 400px;
     height: 60px;
+    font-size: 20px;
+    font-family: 'Manrope';
+    font-weight: 400;
+    color: hwb(240 4% 78% / 0.6);
+    padding-left: 16px;
     background-color: #F4F4FF;
     border: none;
 }
@@ -76,7 +81,7 @@
     font-weight: 400;
     font-size: 20px;
     color: hwb(240 4% 78% / 0.6);
-    padding-left: 16px;
+
 }
 
 .botoes{
