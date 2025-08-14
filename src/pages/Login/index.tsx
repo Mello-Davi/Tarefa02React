@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useNavigate } from "react-router-dom"
 
 const userSchema = z.object({
-    email: z.string().nonempty('O email não pode ser vazio').email(),
+    email: z.string().nonempty('O email não pode ser vazio').email('Tem que ser um email válido'),
     senha: z.string().nonempty('A senha não pode ser vazia').min(12, 'A senha deve ter no mínimo 12 caracteres')
 })
 
@@ -73,7 +73,7 @@ export default function Login(){
                         <div className={styles.botoes}>
                             <button disabled={isSubmitting} className={styles.botaoEntrar}>{isSubmitting ? 'Entrando...' : 'Entrar'}</button>
                             {errors.root && <span>{errors.root.message}</span>}
-                            <button  className={styles.botaoCadastro}>Cadastre-se</button>
+                            <button  className={styles.botaoCadastro} type="button">Cadastre-se</button>
                         </div>
                     </form>
                 </div>

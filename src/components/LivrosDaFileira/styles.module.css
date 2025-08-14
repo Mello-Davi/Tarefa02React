@@ -5,6 +5,7 @@
     flex-direction: row;
     border: 1px solid #0909371A;
     border-radius: 4px;
+    background-color: #F4F4FF;
 }
 .capa{
     width: 120px;

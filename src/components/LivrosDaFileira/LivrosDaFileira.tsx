@@ -10,19 +10,24 @@ interface LivroCardProps {
     capa: string
 }
 
-export default function LivrosDaFileira({ id, titulo, autor, genero, preco, sinopse, capa }: LivroCardProps){
 
+          
+
+
+export default function LivrosDaFileira({ id, titulo, autor, preco, capa }: LivroCardProps){
+
+   
     return(
         <div className={styles.livro}>
             <div className={styles.espacoCapa}>
-                <img src="" alt="" className={styles.capa}/>
+                <img src={capa} alt="" className={styles.capa}/>
             </div>
             <div className={styles.especificacoes}>
                 <div className={styles.tituloAutor}>
-                    <p className={styles.titulo}>Dune</p>
-                    <p className={styles.autor}>Frank Herbert</p>
+                    <p className={styles.titulo}>{titulo}</p>
+                    <p className={styles.autor}>{autor}</p>
                 </div>
-                <p className={styles.preco}>R$ 87,75</p>
+                <p className={styles.preco}>R${preco.toFixed(2)}</p>
             </div>
 
         </div>
