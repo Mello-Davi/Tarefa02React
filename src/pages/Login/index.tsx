@@ -26,7 +26,7 @@ export default function Login(){
             await new Promise(resolve => setTimeout(resolve, 2000))
             console.log(data)
             
-            navigate('/app/home');
+            navigate('/home');
         } catch {
             setError('root', {
                 message: "Erro ao iniciar sessão."
