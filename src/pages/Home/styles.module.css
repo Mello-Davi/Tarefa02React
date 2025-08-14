@@ -8,6 +8,7 @@
     width: 1320px;
     height: 400px;
     padding-top: 40px;
+    padding-bottom: 74px;
 }
 
 .livrosPcategoria{
@@ -15,7 +16,8 @@
     height: 264px;
     display: flex;
     flex-direction: column;
-    padding-top: 92px;
+    padding-top: 18px;
+    padding-bottom: 42px;   
 }
 
 .cabecalho {
@@ -77,5 +79,19 @@
     gap: .25rem;
 }
 .titulo {
+    font-size: 20px;
+    font-weight: 600;
+    color: #090937;
+}
+.autor{
+    font-size: 16px;
+    font-weight: 600;
+    color: #09093799;
+}
+.preco {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6251DD;
+    padding-bottom: 10px;
 }
 

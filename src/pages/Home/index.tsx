@@ -24,7 +24,7 @@ export default function Home(){
                                 <p className={styles.titulo}>Dune</p>
                                 <p className={styles.autor}>Frank Herbert</p>
                             </div>
-                            <div className={styles.preco}><p>R$ 87,75</p></div>
+                            <p className={styles.preco}>R$ 87,75</p>
                         </div>
 
                     </div>
