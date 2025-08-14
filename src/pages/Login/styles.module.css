@@ -30,14 +30,12 @@
     padding-top: 111px;
 }
 .welcomeElogin h2{
-    font-family: 'Manrope';
     font-size: 24px;
     font-weight: 600;
     color: hwb(240 4% 78% / 0.6);
 }
 
 .welcomeElogin h1{
-    font-family: 'Manrope';
     font-weight: 700;
     font-size: 32px;
     color: #090937;
@@ -60,7 +58,6 @@
     
 }
 .emailSenha label{
-    font-family: 'Manrope';
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 10px;
@@ -69,7 +66,6 @@
     width: 400px;
     height: 60px;
     font-size: 20px;
-    font-family: 'Manrope';
     font-weight: 400;
     color: hwb(240 4% 78% / 0.6);
     padding-left: 16px;
@@ -77,7 +73,6 @@
     border: none;
 }
 .emailSenha input::placeholder{
-    font-family: 'Manrope';
     font-weight: 400;
     font-size: 20px;
     color: hwb(240 4% 78% / 0.6);
@@ -94,7 +89,6 @@
 .botaoEntrar{
     width: 400px;
     height: 60px;
-    font-family: 'Manrope';
     font-size: 24px;
     font-weight: 600;
     border: none;
@@ -105,7 +99,6 @@
 .botaoCadastro{
     width: 400px;
     height: 60px;
-    font-family: 'Manrope';
     font-size: 24px;
     font-weight: 600;
     border: 1px solid #6251DD;

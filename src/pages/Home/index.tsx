@@ -16,7 +16,9 @@ export default function Home(){
                 <div className={styles.fileiraLivros}>
                     
                     <div className={styles.livro}>
-                        <div className={styles.capa}></div>
+                        <div className={styles.espacoCapa}>
+                            <img src="" alt="" className={styles.capa}/>
+                        </div>
                         <div className={styles.especificacoes}>
                             <div className={styles.tituloAutor}>
                                 <p className={styles.titulo}>Dune</p>
