@@ -1,6 +1,17 @@
 import styles from "./styles.module.css"
 
-export default function LivrosDaFileira(){
+interface LivroCardProps {
+    id: number
+    titulo: string
+    autor: string
+    genero: string
+    preco: number
+    sinopse: string
+    capa: string
+}
+
+export default function LivrosDaFileira({ id, titulo, autor, genero, preco, sinopse, capa }: LivroCardProps){
+
     return(
         <div className={styles.livro}>
             <div className={styles.espacoCapa}>
