@@ -8,6 +8,8 @@ export default function Home(){
             <img src={banner} alt="banner de desconto" id={styles.banner}/>
 
             <FileiraLivros />
+            <FileiraLivros />
+            <FileiraLivros />
             
         </div>
     )
