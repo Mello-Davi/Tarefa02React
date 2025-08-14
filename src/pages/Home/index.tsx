@@ -7,7 +7,27 @@ export default function Home(){
             <img src={banner} alt="banner de desconto" id={styles.banner}/>
 
             <div className={styles.livrosPcategoria}>
+                
+                <div className={styles.cabecalho}>
+                    <p className={styles.categoria}>Best Seller</p>
+                    <p className={styles.btnVermais}>Ver mais</p>
+                </div>
+                
+                <div className={styles.fileiraLivros}>
+                    
+                    <div className={styles.livro}>
+                        <div className={styles.capa}></div>
+                        <div className={styles.especificacoes}>
+                            <div className={styles.tituloAutor}>
+                                <p className={styles.titulo}>Dune</p>
+                                <p className={styles.autor}>Frank Herbert</p>
+                            </div>
+                            <div className={styles.preco}><p>R$ 87,75</p></div>
+                        </div>
 
+                    </div>
+                
+                </div>
             </div>
         </div>
     )
