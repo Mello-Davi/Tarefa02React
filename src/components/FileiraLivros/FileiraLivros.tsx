@@ -2,43 +2,17 @@ import { useEffect, useState } from "react"
 import LivrosDaFileira from "../LivrosDaFileira/LivrosDaFileira"
 import styles from "./styles.module.css"
 import axios from "axios"
-
-interface fileiraProps {
-    genero: string,
-}
-interface livro {
-    id: number,
-    titulo: string,
-    autor: string,
-    genero: string,
-    preco: number,
-    sinopse: string,
-    capa: string
-}
+import { Link } from "react-router-dom"
 
 export default function FileiraLivros({ genero }: fileiraProps ) 
 {
-    const [livros, setLivros] = useState<livro[]>([])
-    const config = {
-        params: {
-            genero: genero,
-            _limt: 4
-        },
-        timeout: 1000
-    }
-
-    useEffect(()=> {
-        axios.get('http://localhost:3002/livros?', config)
-        .then(response => setLivros(response.data))
-        .catch(error => console.error('Algo deu errado: ' + error))
-    }, [])
 
     return(
         <div className={styles.livrosPcategoria}>
                 
         <div className={styles.cabecalho}>
             <p className={styles.categoria}>{genero}</p>
-            <p className={styles.btnVermais}>Ver mais</p>
+            <Link to={`/livraria/genero/${genero}`} className={styles.btnVermais}>Ver mais</Link>
         </div>
         
         <div className={styles.fileiraLivros}>

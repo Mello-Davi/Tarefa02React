@@ -8,7 +8,7 @@ export default function Header(){
     return(
         <header className={styles.header}>
             <nav className={styles.links}>
-                <Link to="/home"> <img src={logo} alt="Logo" id={styles.logo}/></Link>
+                <Link to="/livraria/home"> <img src={logo} alt="Logo" id={styles.logo}/></Link>
                 
                 <div className={styles.icones}>
                     <Link to="/" className={styles.img}> <img src={profile} alt="Perfil" /> </Link>
