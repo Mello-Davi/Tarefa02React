@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styles from "./styles.module.css"
 
 interface LivroCardProps {
@@ -14,7 +15,7 @@ export default function LivrosDaFileira({ id, titulo, autor, preco, capa }: Livr
 
    
     return(
-        <div className={styles.livro}>
+        <Link to={`/livraria/livro/${id}`} className={styles.livro}>
             <div className={styles.espacoCapa}>
                 <img src={capa} alt="" className={styles.capa}/>
             </div>
@@ -26,6 +27,6 @@ export default function LivrosDaFileira({ id, titulo, autor, preco, capa }: Livr
                 <p className={styles.preco}>R${preco.toFixed(2)}</p>
             </div>
 
-        </div>
+        </Link>
     )
 }
