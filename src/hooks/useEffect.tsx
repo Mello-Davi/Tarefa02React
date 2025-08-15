@@ -17,18 +17,19 @@ interface livro {
 
 export default function useGetLivros({genero, limite}: fileiraProps){
     const [livros, setLivros] = useState<livro[]>([])
-    const config = {
-        params: {
-            genero,
-            _limit: limite
-        },
-        timeout: 1000
-    }
     
     useEffect(()=> {
+        const config = {
+            params: {
+                genero,
+                _limit: limite
+            },
+            timeout: 1000
+        }
+
         axios.get('http://localhost:3002/livros?', config)
         .then(response => setLivros(response.data))
         .catch(error => console.error('Algo deu errado: ' + error))
-    }, [])
+    }, [genero, limite])    
     return{livros}
 }

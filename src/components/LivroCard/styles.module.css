@@ -1,0 +1,48 @@
+.card{
+    width: 300px;
+    height: 433px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4FF;
+    border: 1px solid #0909371A;
+    border-radius: 4px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.card img{
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 #6251DD33;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+.especificacoes {
+    width: 260px;
+    height: 73px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.titulo{
+    font-size: 20px ;
+    font-weight: 600;
+    color: #090937;
+}
+.autor{
+    font-size: 16px;
+    font-weight: 600;
+    color: #09093799;
+}
+.precoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.preco{
+    font-size: 24px;
+    font-weight: 700;
+    color: #6251DD;
+    padding-bottom: 10px;
+}

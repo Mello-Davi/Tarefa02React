@@ -1,35 +1,38 @@
 import styles from "./styles.module.css"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import seta from "../../assets/Vector.png"
+import useGetLivros from "../../hooks/useEffect"
+import LivroCard from "../LivroCard/LivroCard"
 
-export default function LivrosCategoria(){
+export default function LivrosCategoria( ){
+    const { genero } = useParams();
+    const generoHook = genero || '';
+    const { livros } = useGetLivros({ genero: generoHook });
+
     return(
-        <div className={styles.cartoesEcategoria}>
+            <div className={styles.cartoesEcategoria}>
+
                 <div className={styles.botaoContainer}>
                     <Link to="/livraria/home" className={styles.return}>
                         <img src={seta} alt="" />
-                        <p>Best Seller</p>
+                        <p>{genero}</p>
                     </Link>
                 </div>
 
                 
                 <div className={styles.livros}>
-                    
-                    <div className={styles.card}>
-                        <img src="" alt="" />
-                        
-                        <div className={styles.especificacoes}>
-                            <div className={styles.tituloAutor}>
-                                <p className={styles.titulo}>Duna</p>
-                                <p className={styles.autor}>Frank Herbert</p>
-                            </div>
-                            
-                            <div className={styles.precoContainer}>
-                                <p className={styles.preco}>R$87,75</p>
-                            </div>
-                        
-                        </div>
-                    </div>
+                    {livros.map((livro) => (
+                    <LivroCard 
+                        autor={livro.autor}
+                        capa={livro.capa}
+                        genero={livro.genero}
+                        id={livro.id}
+                        preco={livro.preco}
+                        sinopse={livro.sinopse}
+                        titulo={livro.titulo}
+                        key={livro.id}
+                    />
+                ))}
                 </div>
             </div>
     )

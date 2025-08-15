@@ -19,7 +19,7 @@ export default function FileiraLivros({ genero }: fileiraProps )
         </div>
         
         <div className={styles.fileiraLivros}>
-            {livros.slice(0,8).map((livro) => (
+            {livros.slice(0,4).map((livro) => (
                 <LivrosDaFileira 
                     autor={livro.autor}
                     capa={livro.capa}
