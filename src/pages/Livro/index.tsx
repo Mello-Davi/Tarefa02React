@@ -1,9 +1,16 @@
 import styles from "./styles.module.css"
 import seta from "../../assets/Vector.png"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
+import useGetLivroInd from "../../hooks/useGetLivro";
 
 export default function Livro(){
     const navigate = useNavigate();
+    const { idLivros } = useParams();
+    const { livros } = useGetLivroInd(Number(idLivros));
+    if (!livros || livros.length === 0 ){
+        return <div>Carregando...</div>   
+    }
+    const livro = livros[0];
 
     return( 
         <div className={styles.mainLivro}>
@@ -16,24 +23,24 @@ export default function Livro(){
 
             <div className={styles.capaTituloAutorSinopse}>
                 <div className={styles.capa}>
-                    <img src="" alt="" className={styles.capaImg} />
-                </div>
+                    <img src={livro.capa} alt="" className={styles.capaImg} />
+                </div> 
                 <div className={styles.tituloAutorSinopse}>
                     <div className={styles.tituloAutor}>
-                        <p className={styles.titulo}>Duna</p>
-                        <p className={styles.autor}>Frank Herbert</p>
+                        <p className={styles.titulo}>{livro.titulo}</p>
+                        <p className={styles.autor}>{livro.autor}</p>
                     </div>
                     <div className={styles.sinopse}>
                         <p id={styles.sinopse}>Sinopse</p>
                         <p className={styles.descricao}>
-                        Duna se passa em um futuro distante, em meio a uma sociedade feudal interestelar na qual várias casas nobres controlam feudos planetários. A história acompanha o jovem Paul Atreides, cuja família aceita a administração do planeta Arrakis. Embora o planeta seja um deserto inóspito e escassamente povoado, é a única fonte de melange, ou "especiaria", uma droga que prolonga a vida e aumenta as habilidades mentais. A melange também é necessária para a navegação espacial, que exige um tipo de consciência multidimensional e presciência que só a droga proporciona. Como a melange só pode ser produzida em Arrakis, o controle do planeta é uma empreitada cobiçada e perigosa. A história explora as complexas interações de política, religião, ecologia, tecnologia e emoção humana, enquanto as facções do império se confrontam em uma luta pelo controle de Arrakis e de sua especiaria.
+                        {livro.sinopse}
                         </p>
                     </div>
                 </div>
             </div>
             <div className={styles.botaoContainer}>
                 <button className={styles.btnAddCart}>
-                    <p className={styles.preco}>R$87,75</p>
+                    <p className={styles.preco}>R${livro.preco.toFixed(2)}</p>
                     <p className={styles.adicionarCart}>Adicionar ao carrinho</p>
                 </button>
             </div>

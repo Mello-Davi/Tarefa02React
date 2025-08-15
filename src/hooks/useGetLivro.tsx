@@ -16,8 +16,9 @@ export default function useGetLivroInd(id: number) {
     
     useEffect(()=> {
         axios.get(`http://localhost:3002/livros/${id}`)
-        .then(response => setLivros(response.data))
+        .then(response => setLivros([response.data]))
         .catch(error => console.error('Algo deu errado: ' + error))
-    }, [])
+    }, [id])
+    
     return{livros}
 }
