@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainLivro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnReturnContainer{
+    width: 91.67%;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 31px;
+}
+.btnReturn{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;align-items: center;
+    cursor: pointer;
+}
+.btnReturn img{
+    width: 9.04px;
+    height: 15.79px;
+    padding: 8.6px 15.6px 8.6px 5.35px;    
+}
+.btnReturn p{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.capaTituloAutorSinopse{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.capa{
+    width: 420px;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4FF;
+    border: 1px solid #0909371A;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+.capaImg{
+    width: 300px;
+    height: 450px;
+    box-shadow: 0 4px 8px 0 #6251DD33;
+    border: none;
+    margin: 60px;
+    border-radius: 4px;
+}
+
+.tituloAutorSinopse{
+    width: auto;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}
+.tituloAutor{
+    display: flex;  
+    flex-direction: column;
+    gap: .625rem;
+}
+.titulo{
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+}
+.autor{
+    font-size: 32px;
+    font-weight: 600;
+    color: #00000099;
+}
+
+#sinopse{
+    font-size: 24px;
+    font-weight: 700;
+    color: #090937;
+}
+.descricao{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: justify;
+    color: #09093799;
+    padding-right: 60px;
+}
+.botaoContainer{
+    width: 91.67%;
+    padding-top: 83px;
+    padding-bottom: 99px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.btnAddCart{
+    width: 400px;
+    height: 60px;
+    background-color: #EF6B4A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #d8513a;
+    }
+}
+.preco{
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+.adicionarCart{
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+}
