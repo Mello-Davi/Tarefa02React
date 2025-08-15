@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react"
+import useGetLivros from "../../hooks/useEffect"
 import LivrosDaFileira from "../LivrosDaFileira/LivrosDaFileira"
 import styles from "./styles.module.css"
-import axios from "axios"
 import { Link } from "react-router-dom"
 
-export default function FileiraLivros({ genero }: fileiraProps ) 
-{
+interface fileiraProps {
+    genero: string
+}
 
+export default function FileiraLivros({ genero }: fileiraProps ) 
+{   const limite = 4
+    const {livros} = useGetLivros({genero, limite})
     return(
         <div className={styles.livrosPcategoria}>
                 
@@ -16,7 +19,7 @@ export default function FileiraLivros({ genero }: fileiraProps )
         </div>
         
         <div className={styles.fileiraLivros}>
-            {livros.slice(0,4).map((livro) => (
+            {livros.slice(0,8).map((livro) => (
                 <LivrosDaFileira 
                     autor={livro.autor}
                     capa={livro.capa}
