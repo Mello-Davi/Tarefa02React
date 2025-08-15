@@ -10,10 +10,6 @@ interface LivroCardProps {
     capa: string
 }
 
-
-          
-
-
 export default function LivrosDaFileira({ id, titulo, autor, preco, capa }: LivroCardProps){
 
    

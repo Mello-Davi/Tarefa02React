@@ -3,7 +3,7 @@ import FileiraLivros from "../../components/FileiraLivros/FileiraLivros"
 import styles from "./styles.module.css"
 
 const generos = [
-    "Best-Sellers",
+    "Best-sellers",
     "Clássicos",
     "Infantil",
     "Fantasia",
