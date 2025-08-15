@@ -95,6 +95,11 @@
     border-radius: 4px;
     color: white;
     background-color: #EF6B4A;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #f23f2f;
+    }
 }
 .botaoCadastro{
     width: 400px;
@@ -105,5 +110,11 @@
     border-radius: 4px;
     color: #6251DD;
     background-color: white;
+    cursor: pointer;
+
+    &:hover{
+        color: white;
+        background-color: #6251DD;
+    }
 }
 
