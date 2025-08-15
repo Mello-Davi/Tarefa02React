@@ -20,11 +20,14 @@ export default function Genero(){
                 <button className={styles.lupa}><img src={lupa} alt="" /></button>
                 <input type="text" className={styles.input} placeholder="Pesquisar por título"/>
             </div> 
+            <div className={styles.genero}>
             {generos.slice(0,1).map((genero) => (
                 <LivrosCategoria
                 key={genero}
                 />
             ))}
+            </div>
+           
 
         </div>
     )

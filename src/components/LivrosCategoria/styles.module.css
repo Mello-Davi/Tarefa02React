@@ -3,7 +3,7 @@
     height: 33px;   
 }
 .return{
-    width: 200px;
+    width: auto;
     display: flex;
     flex-direction: row;
     text-decoration: none;
