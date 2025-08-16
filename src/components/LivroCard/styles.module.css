@@ -29,6 +29,11 @@
     font-size: 20px ;
     font-weight: 600;
     color: #090937;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .autor{
     font-size: 16px;
