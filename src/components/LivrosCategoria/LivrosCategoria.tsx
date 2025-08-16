@@ -4,11 +4,14 @@ import seta from "../../assets/Vector.png"
 import useGetLivros from "../../hooks/useEffect"
 import LivroCard from "../LivroCard/LivroCard"
 
-export default function LivrosCategoria( ){
-    const { genero } = useParams();
-    const generoHook = genero || '';
-    const { livros } = useGetLivros({ genero: generoHook });
+interface Props {
+    genero: string
+    procurarTitulo: string
+}
+export default function LivrosCategoria({ genero, procurarTitulo}: Props ){
+    const { livros } = useGetLivros({ genero });
 
+    const livrosFiltrados = livros.filter(livro => livro.titulo.toLowerCase().includes(procurarTitulo.toLowerCase()))
     return(
             <div className={styles.cartoesEcategoria}>
 
@@ -21,7 +24,7 @@ export default function LivrosCategoria( ){
 
                 
                 <div className={styles.livros}>
-                    {livros.map((livro) => (
+                    {livrosFiltrados.map((livro) => (
                     <LivroCard 
                         autor={livro.autor}
                         capa={livro.capa}
