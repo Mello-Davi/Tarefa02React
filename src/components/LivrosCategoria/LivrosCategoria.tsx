@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import seta from "../../assets/Vector.png"
 import useGetLivros from "../../hooks/useEffect"
 import LivroCard from "../LivroCard/LivroCard"
